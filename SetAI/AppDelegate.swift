@@ -8,30 +8,17 @@
 
 import UIKit
 import CoreData
-import p2_OAuth2
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let Clarifai_oAuth_Settings = [
-        "client_id": "sB5HiQv3_ib2eZgBHgvrGzjjRLN1SYkVBKDVFCOv",
-        "client_secret": "MqMmzUiZotZwLPxgwXtH4SYAXO6XdbGnRpDHQTO2",
-        "grant_type": "client_credentials",
-        ] as OAuth2JSON
-    
-    
-    var oauth:OAuth2CodeGrant!
+ 
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-     
-        oauth = OAuth2CodeGrant(settings: Clarifai_oAuth_Settings)
-        oauth.verbose = true // For Logs
-        
         return true
     }
 
