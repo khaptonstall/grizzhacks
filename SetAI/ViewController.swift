@@ -55,7 +55,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             
-            print("Got image!")
+            self.clarifaiClient.getTagsForImage(image)
+            /*
+            self.clarifaiClient.getTagsForImage(image) { tags in
+               // print(tags)
+            } */
+            //print("Got image!")
         }
     }
 }
