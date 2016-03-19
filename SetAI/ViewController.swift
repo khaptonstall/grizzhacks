@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var containerView: UIView!
     var picker = UIImagePickerController()
     let clarifaiClient = ClarifaiClient()
-    var card: Card = Card(color: .Red, fill: .Striped, count: 1)
+    var card: Card = Card(color: .Red, fill: .Striped, count: 1, shape: .Oval)
     let cardPicker = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("cardPicker") as! PickerViewController
     
     override func viewDidLoad() {
