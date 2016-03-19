@@ -25,6 +25,20 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 *.xcscheme
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+.idea/
 
 ## Obj-C/Swift specific
 *.hmap
@@ -37,6 +51,7 @@ xcuserdata
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+Podfile.lock
 
 # Carthage
 #

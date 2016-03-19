@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					295E12FB1C9DB1A3002E58F0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = ZXZLP9MX9G;
 					};
 				};
 			};
@@ -335,6 +336,7 @@
 			baseConfigurationReference = 6C286880242B8C1DB20855FE /* Pods-SetAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SetAI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyleHaptonstall.SetAI;
@@ -347,6 +349,7 @@
 			baseConfigurationReference = 2212A4CF6E73643DCB28B74A /* Pods-SetAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SetAI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KyleHaptonstall.SetAI;
