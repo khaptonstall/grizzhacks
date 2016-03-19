@@ -36,7 +36,9 @@ class ClarifaiClient {
         
     }
     
-    func getTagsForImage(image: UIImage /*, completion: (tags:String...) -> () */){
+    
+    
+    func getTagsForImage(image: UIImage, completion: (docID:String) -> ()){
         
         
         let urlPath = "https://api.clarifai.com/v1/tag"
@@ -74,6 +76,7 @@ class ClarifaiClient {
 
                         print("docID", docID)
                         print("Classes", classes)
+                        completion(docID: docID as! String)
                         
                         
                     }
@@ -87,9 +90,37 @@ class ClarifaiClient {
     
     
     
-    func addTagsForImage(image : UIImage, tags: String...){
+    func addTagsForImage(docid : String, tags: String...){
+        
+        var tagString = ""
+        
+        for i in 0..<tags.count{
+            if i < tags.count - 1{
+                tagString += "\(tags[i]), "
+            }
+            else{
+                tagString += "\(tags[i])"
+            }
+        }
+        
+   
+        let params:[String: AnyObject] = [
+            "docids": docid,
+            "add_tags": tagString,
+        ]
+        
+        let headers: [String: String] = [
+            "Authorization" : "Bearer \(self.accessToken!)",
+        ]
+        
+        let urlPath = "https://api.clarifai.com/v1/feedback/"
         
         
+        let request = Alamofire.request(.POST, urlPath, parameters: params, encoding: .URL, headers: headers)
+        request.responseJSON { (response) -> Void in
+            print(response.result)
+            
+        }
         
     }
     
