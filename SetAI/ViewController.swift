@@ -11,17 +11,24 @@ import Alamofire
 
 import MobileCoreServices
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PickerControllerDelegate {
     
     @IBOutlet weak var containerView: UIView!
     var picker = UIImagePickerController()
     let clarifaiClient = ClarifaiClient()
+    var card: Card = Card(color: .Red, fill: .Striped, count: 1)
+    let cardPicker = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("cardPicker") as! PickerViewController
     
     override func viewDidLoad() {
 
         clarifaiClient.getToken(){ accessToken in
             print(accessToken)
         }
+    }
+    
+    func finishedPickingCard(card: Card) {
+        
+        self.card = card
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,6 +48,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
 
+    @IBAction func pick(sender: AnyObject) {
+        cardPicker.delegate = self
+        presentViewController(cardPicker, animated: true, completion: nil)
+    }
     
     @IBAction func scan(sender: AnyObject) {
         

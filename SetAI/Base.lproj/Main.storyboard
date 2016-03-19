@@ -40,12 +40,43 @@
                                     <constraint firstItem="Ea8-ZT-agT" firstAttribute="centerX" secondItem="W8T-W1-S1X" secondAttribute="centerX" id="Zsc-Qf-GqA"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeR-IQ-q1f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7N-7j-7fY">
+                                        <rect key="frame" x="285" y="15" width="30" height="30"/>
+                                        <state key="normal" title="Pick">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4H-xv-tQG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="s7N-7j-7fY" firstAttribute="centerX" secondItem="FeR-IQ-q1f" secondAttribute="centerX" id="1f5-Ru-pys"/>
+                                    <constraint firstItem="s7N-7j-7fY" firstAttribute="centerX" secondItem="FeR-IQ-q1f" secondAttribute="centerX" id="SLE-U8-HTd"/>
+                                    <constraint firstItem="s7N-7j-7fY" firstAttribute="centerY" secondItem="FeR-IQ-q1f" secondAttribute="centerY" id="Xz9-pS-WrZ"/>
+                                    <constraint firstItem="s7N-7j-7fY" firstAttribute="centerY" secondItem="FeR-IQ-q1f" secondAttribute="centerY" id="i1B-kH-bQ4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SLE-U8-HTd"/>
+                                        <exclude reference="i1B-kH-bQ4"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FeR-IQ-q1f" secondAttribute="trailing" id="4QY-j1-Edw"/>
                             <constraint firstItem="W8T-W1-S1X" firstAttribute="top" secondItem="gh6-30-Z2f" secondAttribute="bottom" id="Isu-zv-zZN"/>
                             <constraint firstItem="gh6-30-Z2f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="J3p-O9-f5Z"/>
                             <constraint firstItem="gh6-30-Z2f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NOc-Hv-fdt"/>
+                            <constraint firstItem="FeR-IQ-q1f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RP0-T4-fR0"/>
+                            <constraint firstItem="FeR-IQ-q1f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WTa-Da-w44"/>
+                            <constraint firstItem="gh6-30-Z2f" firstAttribute="top" secondItem="FeR-IQ-q1f" secondAttribute="bottom" id="ae6-5D-kEF"/>
                             <constraint firstAttribute="trailing" secondItem="W8T-W1-S1X" secondAttribute="trailing" id="cis-Bm-cjY"/>
                             <constraint firstItem="W8T-W1-S1X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dA5-i0-qcl"/>
                             <constraint firstItem="gh6-30-Z2f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fNs-vk-Jq4"/>
@@ -60,6 +91,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510" y="278"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="CVk-r4-Fjs">
+            <objects>
+                <viewController storyboardIdentifier="cardPicker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8VV-GT-Bre" customClass="PickerViewController" customModule="SetAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gdd-8f-mRC"/>
+                        <viewControllerLayoutGuide type="bottom" id="MPL-fZ-SR7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xZ4-5f-pbY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cfl-QT-PHi">
+                                <rect key="frame" x="218" y="225" width="164" height="29"/>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="Green"/>
+                                    <segment title="Purple"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-tc-Q0n">
+                                <rect key="frame" x="194" y="286" width="212" height="29"/>
+                                <segments>
+                                    <segment title="Striped"/>
+                                    <segment title="Filled"/>
+                                    <segment title="Bordered"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mON-Eu-OAg">
+                                <rect key="frame" x="224" y="346" width="152" height="29"/>
+                                <segments>
+                                    <segment title="One"/>
+                                    <segment title="Two"/>
+                                    <segment title="Three"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpJ-WS-70d">
+                                <rect key="frame" x="282" y="402" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="8VV-GT-Bre" eventType="touchUpInside" id="wBQ-r2-CCm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cfl-QT-PHi" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="2ZL-7z-tJm"/>
+                            <constraint firstItem="mON-Eu-OAg" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="37U-8P-Hgo"/>
+                            <constraint firstItem="Guh-tc-Q0n" firstAttribute="top" secondItem="Cfl-QT-PHi" secondAttribute="bottom" constant="33" id="Bea-U6-YNP"/>
+                            <constraint firstItem="CpJ-WS-70d" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="aBI-ld-3IS"/>
+                            <constraint firstItem="CpJ-WS-70d" firstAttribute="top" secondItem="mON-Eu-OAg" secondAttribute="bottom" constant="28" id="cjx-HF-Q8T"/>
+                            <constraint firstItem="Guh-tc-Q0n" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="dHk-oW-na8"/>
+                            <constraint firstItem="Guh-tc-Q0n" firstAttribute="centerY" secondItem="xZ4-5f-pbY" secondAttribute="centerY" id="f2w-OO-F5w"/>
+                            <constraint firstItem="mON-Eu-OAg" firstAttribute="top" secondItem="Guh-tc-Q0n" secondAttribute="bottom" constant="32" id="nJZ-mT-qKj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorPicker" destination="Cfl-QT-PHi" id="dIz-dJ-DLu"/>
+                        <outlet property="fillPicker" destination="Guh-tc-Q0n" id="4jP-sz-q1l"/>
+                        <outlet property="numberPicker" destination="mON-Eu-OAg" id="Tzg-E3-rf2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Th4-Mu-WYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="293"/>
         </scene>
     </scenes>
 </document>
