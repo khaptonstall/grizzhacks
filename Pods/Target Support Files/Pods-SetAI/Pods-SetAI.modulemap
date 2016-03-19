@@ -1,6 +1,0 @@
-framework module Pods_SetAI {
-  umbrella header "Pods-SetAI-umbrella.h"
-
-  export *
-  module * { export * }
-}
