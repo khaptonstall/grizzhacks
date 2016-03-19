@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    let clarifaiClient = ClarifaiClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        clarifaiClient.getToken(){ accessToken in
+            print(accessToken)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +26,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 
