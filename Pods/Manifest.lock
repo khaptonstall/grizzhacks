@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (3.2.1)
+  - OpenCV (3.0.0)
+  - p2.OAuth2 (2.2.2):
+    - SwiftKeychain (~> 1.0)
+  - SwiftKeychain (1.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - OpenCV
+  - p2.OAuth2
+
+SPEC CHECKSUMS:
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  OpenCV: be07c02f0d8f125f1d40d261e66a66cb66ece3b3
+  p2.OAuth2: df022733282a66f456d5052731090edef4db333c
+  SwiftKeychain: fd9ad69f7b3ff7a0c7ba579da508bbaa89a395b2
+
+COCOAPODS: 0.39.0
