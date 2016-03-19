@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 import MobileCoreServices
 
@@ -17,6 +18,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
 
+        clarifaiClient.getToken(){ accessToken in
+            print(accessToken)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
