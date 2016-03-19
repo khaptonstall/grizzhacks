@@ -30,11 +30,11 @@ class PickerViewController: UIViewController {
         
         switch numberStr {
             
-        case "One":
+        case "one":
             number = 1
-        case "Two":
+        case "two":
             number = 2
-        case "Three":
+        case "three":
             number = 3
         default:
             break
@@ -71,16 +71,16 @@ struct Card {
 
 enum Shape: String {
     
-    case Oval = "Oval", Squiggle = "Squiggle", Diamond = "Diamond"
+    case Oval = "oval", Squiggle = "squiggle", Diamond = "diamond"
 }
 
 enum Color: String {
     
-    case Red = "Red", Green = "Green", Purple = "Purple"
+    case Red = "red", Green = "green", Purple = "purple"
 }
 
 enum Fill: String {
     
-    case Striped = "Striped", Filled = "Filled", Bordered = "Bordered"
+    case Striped = "striped", Filled = "filled", Bordered = "bordered"
 }
 

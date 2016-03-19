@@ -67,7 +67,7 @@ class ClarifaiClient {
                         
                         var result  = (response.result.value as! Dictionary<String, AnyObject>)["results"] as! Array<AnyObject>
                         
-                        let docID = (result[0] as! Dictionary<String, AnyObject>)["docid"]!
+                        let docID = (result[0] as! Dictionary<String, AnyObject>)["docid_str"]!
                         let results = (result[0] as! Dictionary<String, AnyObject>)["result"] as!  Dictionary<String,AnyObject>
                         
                         let tags = results["tag"] as! Dictionary<String, Array<AnyObject> >
@@ -76,6 +76,9 @@ class ClarifaiClient {
 
                         print("docID", docID)
                         print("Classes", classes)
+                       // let formatter = NSNumberFormatter()
+                       // let id = formatter.stringFromNumber(docID as! NSDecimalNumber)
+                        
                         completion(docID: docID as! String)
                         
                         
@@ -104,6 +107,9 @@ class ClarifaiClient {
         }
         
    
+        print("Tag string", tagString)
+        print("Docid", docid)
+        
         let params:[String: AnyObject] = [
             "docids": docid,
             "add_tags": tagString,

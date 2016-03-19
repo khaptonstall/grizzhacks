@@ -66,12 +66,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             
-            self.clarifaiClient.getTagsForImage(image)
-            /*
-            self.clarifaiClient.getTagsForImage(image) { tags in
-               // print(tags)
-            } */
-            //print("Got image!")
+            
+            
+            clarifaiClient.getTagsForImage(image){ docID in
+                print(docID)
+                
+                self.clarifaiClient.addTagsForImage(docID, tags:
+                    self.card.color.rawValue,
+                    self.card.shape.rawValue,
+                    self.card.fill.rawValue,
+                    "\(self.card.count)")
+            }
+            
+            
+        
         }
     }
 }
