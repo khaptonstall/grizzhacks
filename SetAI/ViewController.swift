@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var containerView: UIView!
     var picker = UIImagePickerController()
     let clarifaiClient = ClarifaiClient()
-    var card: Card = Card(color: .Red, fill: .Striped, count: 1)
+    var card: Card = Card(color: .Red, fill: .Striped, count: 1, shape: .Oval)
     let cardPicker = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("cardPicker") as! PickerViewController
     
     override func viewDidLoad() {
@@ -66,7 +66,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             
-            print("Got image!")
+            
+            
+            clarifaiClient.getTagsForImage(image){ docID in
+                print(docID)
+                
+                self.clarifaiClient.addTagsForImage(docID, tags:
+                    self.card.color.rawValue,
+                    self.card.shape.rawValue,
+                    self.card.fill.rawValue,
+                    "\(self.card.count)")
+            }
+            
+            
+        
         }
     }
 }

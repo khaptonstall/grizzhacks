@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -105,27 +105,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cfl-QT-PHi">
-                                <rect key="frame" x="218" y="225" width="164" height="29"/>
+                                <rect key="frame" x="220" y="225" width="161" height="29"/>
                                 <segments>
-                                    <segment title="Red"/>
-                                    <segment title="Green"/>
-                                    <segment title="Purple"/>
+                                    <segment title="red"/>
+                                    <segment title="green"/>
+                                    <segment title="purple"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-tc-Q0n">
                                 <rect key="frame" x="194" y="286" width="212" height="29"/>
                                 <segments>
-                                    <segment title="Striped"/>
-                                    <segment title="Filled"/>
-                                    <segment title="Bordered"/>
+                                    <segment title="striped"/>
+                                    <segment title="filled"/>
+                                    <segment title="bordered"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mON-Eu-OAg">
-                                <rect key="frame" x="224" y="346" width="152" height="29"/>
+                                <rect key="frame" x="230" y="346" width="140" height="29"/>
                                 <segments>
-                                    <segment title="One"/>
-                                    <segment title="Two"/>
-                                    <segment title="Three"/>
+                                    <segment title="one"/>
+                                    <segment title="two"/>
+                                    <segment title="three"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpJ-WS-70d">
@@ -135,14 +135,24 @@
                                     <action selector="done:" destination="8VV-GT-Bre" eventType="touchUpInside" id="wBQ-r2-CCm"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-8A-Qp1">
+                                <rect key="frame" x="199" y="169" width="203" height="29"/>
+                                <segments>
+                                    <segment title="oval"/>
+                                    <segment title="diamond"/>
+                                    <segment title="squiggle"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cfl-QT-PHi" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="2ZL-7z-tJm"/>
                             <constraint firstItem="mON-Eu-OAg" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="37U-8P-Hgo"/>
                             <constraint firstItem="Guh-tc-Q0n" firstAttribute="top" secondItem="Cfl-QT-PHi" secondAttribute="bottom" constant="33" id="Bea-U6-YNP"/>
+                            <constraint firstItem="Ppf-8A-Qp1" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="WBn-4U-yEE"/>
                             <constraint firstItem="CpJ-WS-70d" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="aBI-ld-3IS"/>
                             <constraint firstItem="CpJ-WS-70d" firstAttribute="top" secondItem="mON-Eu-OAg" secondAttribute="bottom" constant="28" id="cjx-HF-Q8T"/>
+                            <constraint firstItem="Cfl-QT-PHi" firstAttribute="top" secondItem="Ppf-8A-Qp1" secondAttribute="bottom" constant="28" id="ctF-8U-ubP"/>
                             <constraint firstItem="Guh-tc-Q0n" firstAttribute="centerX" secondItem="xZ4-5f-pbY" secondAttribute="centerX" id="dHk-oW-na8"/>
                             <constraint firstItem="Guh-tc-Q0n" firstAttribute="centerY" secondItem="xZ4-5f-pbY" secondAttribute="centerY" id="f2w-OO-F5w"/>
                             <constraint firstItem="mON-Eu-OAg" firstAttribute="top" secondItem="Guh-tc-Q0n" secondAttribute="bottom" constant="32" id="nJZ-mT-qKj"/>
@@ -152,6 +162,7 @@
                         <outlet property="colorPicker" destination="Cfl-QT-PHi" id="dIz-dJ-DLu"/>
                         <outlet property="fillPicker" destination="Guh-tc-Q0n" id="4jP-sz-q1l"/>
                         <outlet property="numberPicker" destination="mON-Eu-OAg" id="Tzg-E3-rf2"/>
+                        <outlet property="shapePicker" destination="Ppf-8A-Qp1" id="Iu1-4E-wWP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Th4-Mu-WYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
