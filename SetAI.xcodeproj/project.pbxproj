@@ -288,6 +288,7 @@
 				295E13131C9DB1A3002E58F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
