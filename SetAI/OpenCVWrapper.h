@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <opencv2/highgui/cap_ios.h>
 
-@interface OpenCVWrapper : NSObject
+@interface OpenCVWrapper : NSObject <CvVideoCameraDelegate>
+
 
 @end

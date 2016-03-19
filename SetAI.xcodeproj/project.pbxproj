@@ -11,6 +11,7 @@
 		0DCB998C1C9DF9B2002437BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB998B1C9DF9B2002437BB /* CoreGraphics.framework */; };
 		0DCB99911C9DFA41002437BB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB99901C9DFA41002437BB /* OpenCVWrapper.mm */; };
 		0DCB99931C9DFCEE002437BB /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99921C9DFCEE002437BB /* opencv2.framework */; };
+		0DCB99951C9E02EB002437BB /* OpenCVCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB99941C9E02EB002437BB /* OpenCVCameraViewController.swift */; };
 		295E13001C9DB1A3002E58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E12FF1C9DB1A3002E58F0 /* AppDelegate.swift */; };
 		295E13021C9DB1A3002E58F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E13011C9DB1A3002E58F0 /* ViewController.swift */; };
 		295E13051C9DB1A3002E58F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295E13031C9DB1A3002E58F0 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		0DCB998F1C9DFA41002437BB /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		0DCB99901C9DFA41002437BB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		0DCB99921C9DFCEE002437BB /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		0DCB99941C9E02EB002437BB /* OpenCVCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCVCameraViewController.swift; sourceTree = "<group>"; };
 		2212A4CF6E73643DCB28B74A /* Pods-SetAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SetAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-SetAI/Pods-SetAI.release.xcconfig"; sourceTree = "<group>"; };
 		295E12FC1C9DB1A3002E58F0 /* SetAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		295E12FF1C9DB1A3002E58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				0DCB998E1C9DFA1E002437BB /* SetAI-Bridging-Header.h */,
 				0DCB998F1C9DFA41002437BB /* OpenCVWrapper.h */,
 				0DCB99901C9DFA41002437BB /* OpenCVWrapper.mm */,
+				0DCB99941C9E02EB002437BB /* OpenCVCameraViewController.swift */,
 			);
 			path = SetAI;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				295E13081C9DB1A3002E58F0 /* SetAI.xcdatamodeld in Sources */,
 				0DCB99911C9DFA41002437BB /* OpenCVWrapper.mm in Sources */,
 				295E13021C9DB1A3002E58F0 /* ViewController.swift in Sources */,
+				0DCB99951C9E02EB002437BB /* OpenCVCameraViewController.swift in Sources */,
 				295E131D1C9DC658002E58F0 /* ClarifaiClient.swift in Sources */,
 				295E13001C9DB1A3002E58F0 /* AppDelegate.swift in Sources */,
 				295E13151C9DBB2C002E58F0 /* SwiftyJSON.swift in Sources */,
