@@ -40,47 +40,68 @@ class ClarifaiClient {
         
         
         let urlPath = "https://api.clarifai.com/v1/tag"
+       
+        let headers: [String: String] = [
+            "Authorization" : "Bearer \(self.accessToken!)",
+        ]
         
-        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-            let fileURL = documentsURL.URLByAppendingPathComponent("\(NSDate()).png")
-            if let pngImageData = UIImagePNGRepresentation(image) {
-                pngImageData.writeToURL(fileURL, atomically: false)
-              
-                
-                let headers: [String: String] = [
-                    "Authorization" : "Bearer \(self.accessToken!)",
-                ]
-                
-                print(self.accessToken)
-                let params: [String: AnyObject] = [
-                    "encoded_data" : "\(fileURL)"
-                ]
-                
-                
-                let request = Alamofire.request(.POST, urlPath, parameters: params, encoding: .URL, headers: headers)
-                
-                
-                request.responseJSON { (response) -> Void in
-                    print(response)
-                    print(response.result)
-                    var result  = response.result.value as! Dictionary<String, AnyObject>
-                    //var resultJSON = JSON(data: reponse.data)
-                    
-                   // completion(tags: "Completed")
-                }
-                
-        }
         
-      
+        let imageData = UIImageJPEGRepresentation(image, 0.9) //(image)
+        let x = imageData!.base64EncodedDataWithOptions(.Encoding64CharacterLineLength)
+        
+        Alamofire.upload(
+            .POST,
+            urlPath,
+            headers: headers,
+            multipartFormData: { multipartFormData in
+                multipartFormData.appendBodyPart(data: x, name: "encoded_image")
+            },
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .Success(let upload, _, _):
+                    upload.responseJSON { response in
+                        
+                        
+                        
+                        var result  = (response.result.value as! Dictionary<String, AnyObject>)["results"] as! Array<AnyObject>
+                        
+                        let docID = (result[0] as! Dictionary<String, AnyObject>)["docid"]!
+                        let results = (result[0] as! Dictionary<String, AnyObject>)["result"] as!  Dictionary<String,AnyObject>
+                        
+                        let tags = results["tag"] as! Dictionary<String, Array<AnyObject> >
+                        
+                        let classes = tags["classes"] as! Array<String>
 
+                        print("docID", docID)
+                        print("Classes", classes)
+                        
+                        
+                    }
+                case .Failure(let encodingError):
+                    print(encodingError)
+                }
+            }
+        )
+        
     }
     
+    
+    
     func addTagsForImage(image : UIImage, tags: String...){
+        
+        
         
     }
     
     func removeTagsForImage(image: UIImage, tags: String...){
         
+    }
+    
+    
+    func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
     }
     
 
