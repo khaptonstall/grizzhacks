@@ -9,23 +9,54 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+import MobileCoreServices
 
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var containerView: UIView!
+    var picker = UIImagePickerController()
     let clarifaiClient = ClarifaiClient()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
 
         clarifaiClient.getToken(){ accessToken in
             print(accessToken)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.mediaTypes = [kUTTypeImage as String]
+        }
+        
+        picker.delegate = self
+        picker.allowsEditing = false
+        picker.showsCameraControls = false
+        
+        self.addChildViewController(picker)
+        containerView.addSubview(picker.view)
+        containerView.layer.masksToBounds = true
+        
     }
 
     
+    @IBAction func scan(sender: AnyObject) {
+        
+        picker.takePicture()
+    }
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            
+            print("Got image!")
+        }
+    }
 }
 

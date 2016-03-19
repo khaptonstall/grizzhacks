@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SetAI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-30-Z2f">
+                                <rect key="frame" x="0.0" y="60" width="600" height="480"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8T-W1-S1X">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea8-ZT-agT">
+                                        <rect key="frame" x="283" y="15" width="35" height="30"/>
+                                        <state key="normal" title="Scan">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9m-zx-tB0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ea8-ZT-agT" firstAttribute="centerY" secondItem="W8T-W1-S1X" secondAttribute="centerY" id="8Fq-A7-3K0"/>
+                                    <constraint firstItem="Ea8-ZT-agT" firstAttribute="centerX" secondItem="W8T-W1-S1X" secondAttribute="centerX" id="Zsc-Qf-GqA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="W8T-W1-S1X" firstAttribute="top" secondItem="gh6-30-Z2f" secondAttribute="bottom" id="Isu-zv-zZN"/>
+                            <constraint firstItem="gh6-30-Z2f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="J3p-O9-f5Z"/>
+                            <constraint firstItem="gh6-30-Z2f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NOc-Hv-fdt"/>
+                            <constraint firstAttribute="trailing" secondItem="W8T-W1-S1X" secondAttribute="trailing" id="cis-Bm-cjY"/>
+                            <constraint firstItem="W8T-W1-S1X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dA5-i0-qcl"/>
+                            <constraint firstItem="gh6-30-Z2f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fNs-vk-Jq4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W8T-W1-S1X" secondAttribute="bottom" id="q8w-Kq-gJe"/>
+                            <constraint firstItem="gh6-30-Z2f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zdz-rn-joJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="gh6-30-Z2f" id="3i3-EK-equ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="510" y="278"/>
         </scene>
     </scenes>
 </document>
