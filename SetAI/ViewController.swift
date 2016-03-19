@@ -24,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         clarifaiClient.getToken(){ accessToken in
             print(accessToken)
         }
+
     }
     
     func finishedPickingCard(card: Card) {

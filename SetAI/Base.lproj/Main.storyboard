@@ -126,8 +126,22 @@
                     <view key="view" contentMode="scaleToFill" id="vwm-JT-ace">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-uS-Uv8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xdz-Wo-fOO" firstAttribute="top" secondItem="0Cs-uS-Uv8" secondAttribute="bottom" id="3Ap-Gt-Oa9"/>
+                            <constraint firstAttribute="trailing" secondItem="0Cs-uS-Uv8" secondAttribute="trailing" id="Cpg-z9-1iQ"/>
+                            <constraint firstItem="0Cs-uS-Uv8" firstAttribute="top" secondItem="vwm-JT-ace" secondAttribute="top" id="Pyu-FP-UKg"/>
+                            <constraint firstItem="0Cs-uS-Uv8" firstAttribute="leading" secondItem="vwm-JT-ace" secondAttribute="leading" id="kDV-Ho-aEM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="0Cs-uS-Uv8" id="ccr-35-mg5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbd-KS-Tns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

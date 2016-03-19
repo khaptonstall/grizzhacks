@@ -12,6 +12,14 @@
 		0DCB99911C9DFA41002437BB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB99901C9DFA41002437BB /* OpenCVWrapper.mm */; };
 		0DCB99931C9DFCEE002437BB /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99921C9DFCEE002437BB /* opencv2.framework */; };
 		0DCB99951C9E02EB002437BB /* OpenCVCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB99941C9E02EB002437BB /* OpenCVCameraViewController.swift */; };
+		0DCB99971C9E05A4002437BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99961C9E05A4002437BB /* AVFoundation.framework */; };
+		0DCB99991C9E0706002437BB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99981C9E0705002437BB /* Accelerate.framework */; };
+		0DCB999B1C9E0711002437BB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB999A1C9E0711002437BB /* CoreImage.framework */; };
+		0DCB999D1C9E0715002437BB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB999C1C9E0715002437BB /* CoreMedia.framework */; };
+		0DCB999F1C9E0719002437BB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB999E1C9E0719002437BB /* CoreVideo.framework */; };
+		0DCB99A11C9E071D002437BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99A01C9E071D002437BB /* QuartzCore.framework */; };
+		0DCB99A31C9E0724002437BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99A21C9E0724002437BB /* Foundation.framework */; };
+		0DCB99A51C9E0729002437BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB99A41C9E0729002437BB /* UIKit.framework */; };
 		295E13001C9DB1A3002E58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E12FF1C9DB1A3002E58F0 /* AppDelegate.swift */; };
 		295E13021C9DB1A3002E58F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E13011C9DB1A3002E58F0 /* ViewController.swift */; };
 		295E13051C9DB1A3002E58F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 295E13031C9DB1A3002E58F0 /* Main.storyboard */; };
@@ -33,6 +41,14 @@
 		0DCB99901C9DFA41002437BB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		0DCB99921C9DFCEE002437BB /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		0DCB99941C9E02EB002437BB /* OpenCVCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCVCameraViewController.swift; sourceTree = "<group>"; };
+		0DCB99961C9E05A4002437BB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0DCB99981C9E0705002437BB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0DCB999A1C9E0711002437BB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		0DCB999C1C9E0715002437BB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0DCB999E1C9E0719002437BB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0DCB99A01C9E071D002437BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0DCB99A21C9E0724002437BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0DCB99A41C9E0729002437BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2212A4CF6E73643DCB28B74A /* Pods-SetAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SetAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-SetAI/Pods-SetAI.release.xcconfig"; sourceTree = "<group>"; };
 		295E12FC1C9DB1A3002E58F0 /* SetAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		295E12FF1C9DB1A3002E58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +69,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCB99A51C9E0729002437BB /* UIKit.framework in Frameworks */,
+				0DCB99A31C9E0724002437BB /* Foundation.framework in Frameworks */,
+				0DCB99A11C9E071D002437BB /* QuartzCore.framework in Frameworks */,
+				0DCB999F1C9E0719002437BB /* CoreVideo.framework in Frameworks */,
+				0DCB999D1C9E0715002437BB /* CoreMedia.framework in Frameworks */,
+				0DCB999B1C9E0711002437BB /* CoreImage.framework in Frameworks */,
 				0DCB998C1C9DF9B2002437BB /* CoreGraphics.framework in Frameworks */,
+				0DCB99991C9E0706002437BB /* Accelerate.framework in Frameworks */,
+				0DCB99971C9E05A4002437BB /* AVFoundation.framework in Frameworks */,
 				0DCB998A1C9DF9AA002437BB /* AssetsLibrary.framework in Frameworks */,
 				0DCB99931C9DFCEE002437BB /* opencv2.framework in Frameworks */,
 				F29223736A88562A2183264A /* Pods_SetAI.framework in Frameworks */,
@@ -114,6 +138,14 @@
 		5C6A3929BC064B0A3B199D6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DCB99A41C9E0729002437BB /* UIKit.framework */,
+				0DCB99A21C9E0724002437BB /* Foundation.framework */,
+				0DCB99A01C9E071D002437BB /* QuartzCore.framework */,
+				0DCB999E1C9E0719002437BB /* CoreVideo.framework */,
+				0DCB999C1C9E0715002437BB /* CoreMedia.framework */,
+				0DCB999A1C9E0711002437BB /* CoreImage.framework */,
+				0DCB99981C9E0705002437BB /* Accelerate.framework */,
+				0DCB99961C9E05A4002437BB /* AVFoundation.framework */,
 				0DCB99921C9DFCEE002437BB /* opencv2.framework */,
 				0DCB998B1C9DF9B2002437BB /* CoreGraphics.framework */,
 				0DCB99891C9DF9AA002437BB /* AssetsLibrary.framework */,

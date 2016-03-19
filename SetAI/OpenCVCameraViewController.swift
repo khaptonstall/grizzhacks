@@ -10,10 +10,24 @@ import UIKit
 
 class OpenCVCameraViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    var camera: CvVideoCamera?
+    let openCvWrapper = OpenCVWrapper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.camera = CvVideoCamera(parentView: self.image)
+        self.camera!.delegate = self.openCvWrapper
+        self.camera!.defaultAVCaptureDevicePosition = .Back
+        self.camera!.defaultAVCaptureSessionPreset = AVCaptureSessionPreset640x480
+        self.camera!.defaultAVCaptureVideoOrientation = .Portrait
+        self.camera!.defaultFPS = 30
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        if let cam = self.camera {
+            cam.start()
+        }
+    }
 }

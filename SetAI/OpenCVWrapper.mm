@@ -12,4 +12,8 @@
 
 @implementation OpenCVWrapper
 
+-(void)processImage:(cv::Mat &)image {
+    NSLog(@"OpenCVWrapper#processImage");
+}
+
 @end
