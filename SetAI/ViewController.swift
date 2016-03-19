@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var containerView: UIView!
     var picker = UIImagePickerController()
+    let clarifaiClient = ClarifaiClient()
     
     override func viewDidLoad() {
 
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         containerView.layer.masksToBounds = true
         
     }
+
     
     @IBAction func scan(sender: AnyObject) {
         
